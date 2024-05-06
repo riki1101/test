@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理画面</title>
+    <style>
+        body {
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        .header-container {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .header label {
+            font-weight: 500;
+        }
+        .header input {
+            margin-left: 8px;
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+        }
+        .content {
+            max-width: 1120px;
+            margin: 32px auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .button {
+            background-color: #ffffff;
+            color: #111827;
+            border: 2px solid #d1d5db;
+            padding: 16px;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            outline: none;
+        }
+        .button:hover {
+            background-color: #eff6ff;
+            color: #1f2937;
+        }
+        .button:focus {
+            outline: 2px solid #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <h1>管理画面</h1>
+            <div>
+                <label for="worker">作業者：</label>
+                <input type="text" id="worker" name="worker">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="grid">
+            <button class="button">ボタン</button>
+            <button class="button">ボタン</button>
+        </div>
+    </div>
+</body>
+</html>
