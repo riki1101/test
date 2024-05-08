@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理画面</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .sidebar {
+            width: 16rem;
+            height: 100vh;
+        }
+        .main-content {
+            flex: 1;
+            padding: 2.5rem;
+        }
+        /* 他のスタイルも同様に追加してください */
+    </style>
+</head>
+<body class="bg-light">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-white shadow-sm">
+            <div class="p-3 border-bottom">
+                <h1 class="h5 font-weight-bold">管理画面</h1>
+            </div>
+            <ul class="list-unstyled p-3">
+                <li><a href="#" class="text-dark">作業者</a></li>
+                <li><a href="#" class="text-dark">街全体</a></li>
+                <li><a href="#" class="text-dark">街区1</a>
+                    <ul class="list-unstyled pl-3 mt-1">
+                        <li><a href="#" class="text-secondary">町内会1</a></li>
+                        <li><a href="#" class="text-secondary">町内会2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="text-dark">街区2</a>
+                    <ul class="list-unstyled pl-3 mt-1">
+                        <li><a href="#" class="text-secondary">町内会3</a></li>
+                        <li><a href="#" class="text-secondary">町内会4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="bg-white shadow-sm p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h2 class="h4 font-weight-bold">ファイル一覧</h2>
+                    <div>
+                        <button class="btn btn-primary">
+                            新規
+                        </button>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>日付</th>
+                            <th>タイトル</th>
+                            <th>名前</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024/4</td>
+                            <td>test1</td>
+                            <td>test1.pdf</td>
+                        </tr>
+                        <tr>
+                            <td>2024/5</td>
+                            <td>test2</td>
+                            <td>test2.pdf</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
