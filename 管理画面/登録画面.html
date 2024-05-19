@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登録画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            border: 1px solid #000;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            display: inline-block;
+            min-width: 50px;
+            margin-right: 10px;
+        }
+        .form-group input,
+        .form-group select {
+            margin-right: 10px;
+        }
+        .file-section {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .file-section button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            margin: 0 10px;
+            padding: 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>登録画面</h2>
+        <div class="form-group">
+            <label for="title">タイトル</label>
+            <input type="text" id="title" name="title">
+            <select id="year" name="year">
+                <option value="">年</option>
+                <!-- 年のオプションを追加 -->
+            </select>
+            <label for="year">年</label>
+            <select id="month" name="month">
+                <option value="">月分</option>
+                <!-- 月のオプションを追加 -->
+            </select>
+            <label for="month">月分</label>
+        </div>
+        <div class="file-section">
+            <input type="file" id="fileInput" accept=".pdf">
+            <span id="fileStatus">選択されていません</span>
+            <table>
+                <thead>
+                    <tr>
+                        <th>名前</th>
+                        <th>タイプ</th>
+                        <th>サイズ</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody">
+                    <!-- ファイル情報がここに追加されます -->
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button type="button">戻る</button>
+            <button type="button">登録</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

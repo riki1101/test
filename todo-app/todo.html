@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスク管理</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .task-input {
+            margin-right: 16px;
+        }
+        .add-button {
+            background-color: #2d6a4f;
+            color: white;
+        }
+        .filter-button {
+            border: 1px solid #ccc;
+        }
+        .filter-button.active {
+            background-color: #38bdf8;
+            color: white;
+        }
+        .task-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+        .task-item:last-child {
+            border-bottom: none;
+        }
+        .task-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .delete-button {
+            background-color: #ccc;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-light p-4">
+    <div class="container mx-auto bg-white p-4 rounded shadow">
+        <div class="input-group mb-4">
+            <input type="text" class="form-control task-input" placeholder="タスクを入力してください">
+            <div class="input-group-append">
+                <button class="btn add-button">追加</button>
+            </div>
+        </div>
+        <div class="btn-group mb-4" role="group">
+            <button type="button" class="btn filter-button active">全て</button>
+            <button type="button" class="btn filter-button">未完了のみ</button>
+            <button type="button" class="btn filter-button">完了のみ</button>
+        </div>
+        <div class="task-list">
+            <div class="task-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked>
+                    <label class="form-check-label">洗い物をする</label>
+                </div>
+                <button class="delete-button">×</button>
+            </div>
+            <div class="task-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">洗濯物を干す</label>
+                </div>
+                <button class="delete-button">×</button>
+            </div>
+            <div class="task-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">買い物へ行く</label>
+                </div>
+                <button class="delete-button">×</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
